@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from './contexts/UserContext';
+import SearchBar from './components/SearchBar';
+import './styles.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = ({ children }) => {
+    const { user, setUser } = useContext(UserContext);
+    const [searchResults, setSearchResults] = useState([]);
+
+    const handleLogout = () => {
+        setUser(null);
+    };
+
+    return (
+        <div>
+            <header>
+                <h1>Custom DOCS</h1>
+                <SearchBar setSearchResults={setSearchResults} />
+                <nav>
+                    {user ? (
+                        <>
+                            <span>{user.email}</span>
+                            <button onClick={handleLogout}>Logout</button>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/login">Log In</Link>
+                            <Link to="/register">Sign Up</Link>
+                        </>
+                    )}
+                </nav>
+            </header>
+            <main>
+                {children}
+                <div>
+                    {Array.isArray(searchResults) && searchResults.map(doc => (
+                        <div key={doc.id}>
+                            <h3>{doc.title}</h3>
+                            <p>{doc.content}</p>
+                        </div>
+                    ))}
+                </div>
+            </main>
+        </div>
+    );
+};
 
 export default App;
