@@ -1,0 +1,22 @@
+{
+  "logo": "Персональные документы",
+  "home": "Главная",
+  "login": "Вход",
+  "register": "Регистрация",
+  "logout": "Выход",
+  "profile": "Профиль",
+  "docs": "Документы",
+  "themeSwitcher": {
+    "light": "Светлая тема",
+    "dark": "Темная тема"
+  },
+  "languageSwitcher": {
+    "english": "Английский",
+    "russian": "Русский"
+  },
+  "searchPlaceholder": "Введите название документа",
+  "loginSuccess": "Успешный вход!",
+  "loginFailed": "Ошибка входа",
+  "registerSuccess": "Успешная регистрация!",
+  "registerFailed": "Ошибка регистрации"
+}

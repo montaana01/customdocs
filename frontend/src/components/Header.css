@@ -1,0 +1,108 @@
+/* src/components/Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--header-background);
+    color: var(--header-text);
+    position: relative;
+}
+
+.header.light {
+    --header-background: #ffffff;
+    --header-text: #000000;
+}
+
+.header.dark {
+    --header-background: #333333;
+    --header-text: #ffffff;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.search-input {
+    flex: 1;
+    max-width: 30%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 5px;
+}
+
+.lang-button {
+    padding: 5px 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.lang-button.active {
+    font-weight: bold;
+}
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.theme-button {
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.user-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.user-menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: var(--header-background);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.user-menu button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.user-menu button:hover {
+    background-color: #f0f0f0;
+}

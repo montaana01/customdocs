@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Перенаправление всех запросов, начинающихся с /api, на backend
+RewriteRule ^api/(.*)$ /backend/public/index.php [L]
+
+# Перенаправление всех остальных запросов на frontend
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /frontend/index.html [L]

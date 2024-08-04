@@ -1,0 +1,41 @@
+.theme-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.switch-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 1px solid var(--text-color);
+    border-radius: 25px;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 30px;
+}
+
+.switch-button .icon {
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+.switch-button .slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.switch-button.light .slider {
+    transform: translateX(0);
+}
+
+.switch-button.dark .slider {
+    transform: translateX(50px);
+}

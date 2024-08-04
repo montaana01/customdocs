@@ -1,0 +1,22 @@
+{
+  "logo": "CustomDocs",
+  "home": "Home",
+  "login": "Login",
+  "register": "Register",
+  "logout": "Logout",
+  "profile": "Profile",
+  "docs": "Documents",
+  "themeSwitcher": {
+    "light": "Light Theme",
+    "dark": "Dark Theme"
+  },
+  "languageSwitcher": {
+    "english": "English",
+    "russian": "Russian"
+  },
+  "searchPlaceholder": "Input doc name",
+  "loginSuccess": "Successfully logged in!",
+  "loginFailed": "Login failed",
+  "registerSuccess": "Successfully registered!",
+  "registerFailed": "Registration failed"
+}
